@@ -1,0 +1,30 @@
+
+.env
+notes.txt
+node_modules/
+
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+
+# VS Code
+.vscode/
+
+# Other Editors
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp

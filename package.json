@@ -1,0 +1,19 @@
+{
+  "name": "discord_bot",
+  "version": "1.0.0",
+  "description": "simple discord bot",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Abdev23",
+  "license": "ISC",
+  "dependencies": {
+    "@discordjs/voice": "^0.18.0",
+    "discord.js": "^14.21.0",
+    "dotenv": "^17.2.1",
+    "ffmpeg-static": "^5.2.0",
+    "libsodium-wrappers": "^0.7.15"
+  }
+}
