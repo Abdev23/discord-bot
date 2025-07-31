@@ -9,7 +9,7 @@ export default {
     console.log(`Logged in as: ${client.user.tag}`);
     client.user.setPresence({
       activities: [{
-        name: "!hder and !ghewet",
+        name: '!hder and !ghewet',
         type: ActivityType.Listening
       }],
       status: 'online'

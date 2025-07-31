@@ -9,8 +9,12 @@ DISCORD BOT
 import 'dotenv/config';
 import { Client, Collection, GatewayIntentBits } from 'discord.js';
 
+import { Game } from './utils/game.js';
 import cmd1 from './commands/cmd1.js';
 import cmd2 from './commands/cmd2.js';
+import cmd3 from './commands/cmd3.js';
+import cmd4 from './commands/cmd4.js';
+import cmd5 from './commands/cmd5.js';
 import readyEvent from './events/ready.js';
 import messageEvent from './events/message.js';
 import voiceEvent from './events/voice.js';
@@ -32,19 +36,23 @@ const client = new Client({
     GatewayIntentBits.GuildVoiceStates
   ]
 });
+client.game= new Game();
 
 function registerHandlers(client) {
   // BOT EVENT
   client.once(readyEvent.name, (...args) => readyEvent.execute(...args, client));
-  
+
   // USER EVENT: !commands
   client.commands = new Collection();
   client.commands.set(cmd1.name, cmd1);
-  client.commands.set(cmd2.name, cmd2);
+  // client.commands.set(cmd2.name, cmd2);
+  client.commands.set(cmd3.name, cmd3);
+  client.commands.set(cmd4.name, cmd4);
+  client.commands.set(cmd5.name, cmd5);
   
   // USER EVENT: voice
   client.on(messageEvent.name, (...args) => messageEvent.execute(...args, client));
-  client.on(voiceEvent.name, (...args) => voiceEvent.execute(...args, client));
+  // client.on(voiceEvent.name, (...args) => voiceEvent.execute(...args, client));
 }
 
 function startBot() {
